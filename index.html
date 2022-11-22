@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-Commerce Page</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./CSS/Reset.css">
+  <link rel="stylesheet" href="./CSS/Navbar.css">
+  <link rel="stylesheet" href="./CSS/Main.css">
+
+</head>
+<body class="overlay">
+
+  <!-- Navbar Starts -->
+  <nav id="nav">
+    <div id="menu">
+      <img src="./images/icon-menu.svg" alt="Menu">
+    </div>
+    <div class="logo">
+      <img src="./images/logo.svg" alt="Logo">
+    </div>
+    <ul>
+      <li id="close"><img src="./images/icon-close.svg" alt="Close"></li>
+      <li><a href="#">Collection</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="profile">
+      <div id="cart_carted">
+        <img id="cart" src="./images/icon-cart.svg" alt="Cart">
+        <span id="carted">0</span>
+      </div>
+      <img id="avatar" src="./images/image-avatar.png" alt="Avatar">
+    </div>
+  </nav>
+  <!-- Navbar Ends -->
+  
+  <!-- Main Starts -->
+  <main id="main">
+    <div class="preview">
+      <div class="mainPreview">
+        <img id="fullPreview" src="images/image-product-1.jpg" alt="Main">
+      </div>
+      <div class="remPreviews">
+        <img class="thumbnail active" src="images/image-product-1-thumbnail.jpg" alt="Thumbnail-1">
+        <img class="thumbnail" src="images/image-product-2-thumbnail.jpg" alt="Thumbnail-2">
+        <img class="thumbnail" src="images/image-product-3-thumbnail.jpg" alt="Thumbnail-3">
+        <img class="thumbnail" src="images/image-product-4-thumbnail.jpg" alt="Thumbnail-4">
+      </div>
+    </div>
+    <div class="details">
+      <span id="company">SNEKER COMPANY</span>
+      <span id="title">Fall Limited Edition Sneakers</span>
+      <span id="desc">These low-profile snekers are your perfect casual wear companion. Featuring a durable rubber outer sole they'll withstand everything the weather offer.</>
+      <div class="price">
+        <div class="price__discounted">
+          <span class="cutoff">$125.00</span>
+          <span class="percent">50%</span>
+        </div>
+        <span>$250.00</span>
+      </div>
+      <div class="count_cart">
+        <div class="count">
+          <button id="minus" type="button" onClick="count('minus')"><img src="./images/icon-minus.svg" alt="Minus"></button>
+          <span class="count__value" id="counter">0</span>
+          <button type="button" onClick="count('plus')"><img src="./images/icon-plus.svg" alt="Plus"></button>
+        </div>
+        <button type="button" class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Javascript -->
+  <script src="./JS/Page.js"></script>
+</body>
+</html>

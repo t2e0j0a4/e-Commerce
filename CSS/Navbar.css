@@ -1,0 +1,207 @@
+/* Navbar Starts */
+
+nav {
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.4rem;
+  border-bottom: 1px solid black;
+}
+
+#menu {
+  display: none;
+}
+
+nav .logo {
+  margin: 0 2rem;
+  width: 12%;
+  text-align: center;
+  object-fit: cover;
+}
+
+nav .logo img {
+  width: 100%;
+  height: auto;
+}
+
+nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 68%;
+  /* background-color: azure; */
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  margin: 0px 2rem 0 0;
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+}
+
+#close {
+  display: none;
+}
+
+nav .profile {
+  width: 12%;
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav .profile img {
+  object-fit: cover;
+}
+
+nav .profile #cart {
+  color: black;
+}
+
+nav .profile #avatar {
+  width: 50px;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  nav .profile {
+    width: 16%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    padding: 1 rem 0.2rem;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: none;
+  }
+
+  body.overlay {
+    background-color: #ececec69;
+  }
+
+  #close {
+    display: block;
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+
+  nav #menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 32px;
+    margin-left: 64px;
+    cursor: pointer;
+  }
+
+  nav .logo {
+    width: 112px;
+  }
+
+  nav .profile {
+    display: flex;
+    align-items: ce;
+    justify-content: center;
+    column-gap: 1rem;
+  }
+
+  nav ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: rgb(236, 236, 236);
+    height: 150%;
+    box-shadow: 4px 1px 12px #000000b0;
+    padding: 1rem 0;
+    z-index: 3;
+    left: -500px;
+    transition: left 0.6s ease-in-out;
+  }
+
+  nav ul.left {
+    left: 0;
+  }
+
+  nav ul li {
+    margin: 1rem 2rem;
+  }
+
+  nav ul li a {
+    font-weight: 900;
+  }
+
+  nav ul li a:hover {
+    text-decoration: none;
+  }
+
+  nav .profile {
+    width: 24%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  nav #menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 32px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  nav .profile {
+    width: 30%;
+  }
+
+  nav ul {
+    width: 70vw;
+    z-index: 3;
+  }
+
+  nav #menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 32px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 440px){
+  nav #menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 32px;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  nav .profile {
+    width: 34%;
+  }
+
+  
+}
+
+/* Navbar Ends */
