@@ -29,23 +29,6 @@
     border-radius: 20px;
 }
 
-#cart_carted {
-    position: relative;
-}
-
-#carted {
-    font-size: 16px;
-    font-weight: 900;
-    background-color: #e18104ef;
-    border-radius: 10px;
-    color: #ffffff;
-    padding: 0.8px 3.2px;
-    position: absolute;
-    top: -12px;
-    right: -6px;
-    font-family: monospace;
-}
-
 #main .preview .remPreviews {
     width: 90%;
     display: flex;
@@ -148,9 +131,14 @@
     flex-direction: row;
     margin: 0 10px 0 0;
     width: 40%;
-    background: hsla(230, 94%, 87%, 0.699);
+    background: hsla(214, 87%, 79%, 0.734);
     padding: 10px 2px;
     border-radius: 10px;
+}
+
+#main .count_cart .count .count__value{
+    font-size: 16px;
+    font-weight: bold;
 }
 
 #main .count_cart .count button {
@@ -179,9 +167,8 @@
 }
 
 #main .count_cart > button:hover {
-    box-shadow: 0 2px 12px #000000a0;
-    transition: box-shadow 0.2s linear;
     background-color: rgb(227, 149, 2);
+    transition: background-color 0.3s linear;
 }
 
 

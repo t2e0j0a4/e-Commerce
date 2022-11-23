@@ -65,6 +65,167 @@ nav .profile #cart {
   color: black;
 }
 
+#cart_carted {
+  position: relative;
+}
+
+#cart_carted img{
+  cursor: pointer;
+}
+
+#cart_carted img:hover{
+  transform: scale(1.05);
+}
+
+#carted {
+  font-size: 16px;
+  font-weight: 900;
+  background-color: #e18104ef;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 0.8px 3.2px;
+  position: absolute;
+  top: -12px;
+  right: -6px;
+  font-family: monospace;
+}
+
+.cartShow{
+  position: absolute;
+  width: 280px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  top: 4rem;
+  right: -100px;
+  display: none;
+  box-shadow: 0px 4px 16px #25252550;
+  padding: 0.8rem 1.2rem;
+  flex-direction: column;
+}
+
+.cartShow.flex{
+  display: flex;
+}
+
+.cartShow .CartX{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartShow span {
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-size: 18px;
+}
+
+.cartShow .line{
+  width: 100%;
+  height: 1px;
+  background-color: #252525;
+  margin: 10px auto;
+}
+
+.cartShow .cartItems{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.cartShow .cartItems .emptyCartList {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  color: #585858;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartShow .cartItems .filledCartList{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.cartShow .cartItems .filledCartList .filledCartData{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.filledCartData .filledCartDataImage{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: default !important;
+}
+
+.filledCartData .filledCartDataContent {
+  width: 90%;
+  padding: 0.4rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.filledCartData .filledCartDataContent span {
+  font-size: 12px;
+  width: 100%;
+  letter-spacing: 0;
+  color: #707070;
+}
+
+.coPrice{
+  margin: 1px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.disPrice {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.checkoutPrice {
+  font-size: 14px !important;
+}
+
+.deleteItem {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: none !important;
+  color: red;
+}
+
+.checkout {
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  background-color: orange;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.checkout:hover{
+  background-color: rgb(227, 149, 2);
+  transition: background-color 0.3s linear;
+}
+
 nav .profile #avatar {
   width: 50px;
   height: auto;
@@ -182,6 +343,12 @@ nav .profile #avatar {
     left: 0;
     margin-top: 32px;
     margin-left: 30px;
+  }
+
+  .cartShow{
+    width: 280px;
+    height: 200px;
+    right: -60px;
   }
 }
 

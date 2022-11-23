@@ -34,8 +34,13 @@
     </ul>
     <div class="profile">
       <div id="cart_carted">
-        <img id="cart" src="./images/icon-cart.svg" alt="Cart">
+        <img id="cart" src="./images/icon-cart.svg" alt="Cart" onclick="showCart()">
         <span id="carted">0</span>
+        <div class="cartShow scale-up-center">
+          <div class="CartX"><span>Cart</span><span><img id="cartClose" src="./images/icon-close.svg" alt="Close"></span></div>
+          <div class="line"></div>
+          <div class="cartItems" id="cartList"></div>
+        </div>
       </div>
       <img id="avatar" src="./images/image-avatar.png" alt="Avatar">
     </div>
@@ -72,11 +77,11 @@
           <span class="count__value" id="counter">0</span>
           <button type="button" onClick="count('plus')"><img src="./images/icon-plus.svg" alt="Plus"></button>
         </div>
-        <button type="button" class="add-to-cart">Add to Cart</button>
+        <button type="button" class="add-to-cart" onclick="addToCart()">Add to Cart</button>
       </div>
     </div>
   </main>
-
+  <!-- Main Ends -->
 
   <!-- Javascript -->
   <script src="./JS/Page.js"></script>
