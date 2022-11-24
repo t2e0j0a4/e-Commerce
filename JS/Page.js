@@ -1,3 +1,5 @@
+// Navbar for Mobile Display
+
 let navigations = document.querySelector("nav ul");
 let menu = document.querySelector("#menu");
 let closemenu = document.querySelector("#close");
@@ -9,6 +11,22 @@ menu.addEventListener("click", () => {
 closemenu.addEventListener("click", () => {
   navigations.classList.remove("left");
 });
+
+navigations.addEventListener("mouseleave",()=>{
+  navigations.classList.remove("left");
+})
+
+window.addEventListener("scroll",()=>{
+  if (window.scrollY >= 0.01) {
+    navigations.classList.remove("left")
+  }
+})
+
+// End of Navbar for mobile display
+
+//////////////////////////////////////////////////////////////////////////
+
+// Adding No:of items to cart
 
 let counter = document.querySelector("#counter");
 let carted = document.querySelector("#carted");
@@ -29,9 +47,11 @@ function count(taken) {
   }
 }
 
-navigations.addEventListener("mouseleave",()=>{
-  navigations.classList.remove("left");
-})
+// End of Adding No:of items to cart
+
+////////////////////////////////////////////////////////////////////////////
+
+// Thumbnails to full Image
 
 let thumbnails = Array.from(document.querySelectorAll(".thumbnail"));
 let fullImage = document.querySelector("#fullPreview");
@@ -47,13 +67,11 @@ thumbnails.map((each)=>{
   })
 })
 
-window.addEventListener("scroll",()=>{
-  if (window.scrollY >= 0.01) {
-    navigations.classList.remove("left")
-  }
-})
+// End of thumbnail to full image 
 
-// Cart
+//////////////////////////////////////////////////////////////////////////
+
+// Cart and Cart Box
 
 let cart = document.querySelector("#cart");
 
@@ -118,29 +136,48 @@ cartButton.innerText = "Checkout"
 cartButton.classList.add("checkout");
 filledCartList.append(filledCartData,cartButton);
 
-cartList.append(emptyCartList)
+cartList.append(emptyCartList,filledCartList);
+
+// End of Cart and Cart Box
+
+///////////////////////////////////////////////////////////////////
+
+// Add to Cart Functionality
 
 function addToCart(){
   carted.innerHTML = Number(counter.innerHTML);
   disPrice.innerHTML = `$125 X ${carted.innerHTML}`;
   checkoutPrice.innerHTML = `$${125 * Number(carted.innerHTML)}`;
   if (Number(carted.innerHTML) !== 0){
-    cartList.append(filledCartList);
-    cartList.removeChild(emptyCartList);
+    filledCartList.style.display = "flex";
+    emptyCartList.style.display = "none";
+  }
+  else{
+    filledCartList.style.display = "none";
+    emptyCartList.style.display = "flex";
   }
 }
+
+// Cart Showing Functionality
 
 function showCart() {
   if (Number(carted.innerHTML) !== 0){
-    cartList.append(filledCartList);
-    cartList.removeChild(emptyCartList);
+    filledCartList.style.display = "flex";
+    emptyCartList.style.display = "none";
+  }
+  else{
+    filledCartList.style.display = "none";
+    emptyCartList.style.display = "flex";
   }
 }
 
+// Delete Cart Item Functionality
+
 const deleteCartItem = () => {
-  cartList.append(emptyCartList);
-  cartList.removeChild(filledCartList);
-  carted.innerHTML = 0
+  filledCartList.style.display = "none";
+  emptyCartList.style.display = "flex";
+  carted.innerHTML = 0;
+  counter.innerHTML = 0;
 }
 
 deleteItem.onclick = ()=>deleteCartItem();

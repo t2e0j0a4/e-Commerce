@@ -47,6 +47,7 @@
 #main .preview .remPreviews img.active {
     border: 3px solid orange;
     padding: 1px;
+    transform: scale(0.95);
     /* filter: opacity(70%); */
 }
 

@@ -45,6 +45,11 @@ nav ul li a {
   color: rgb(35, 35, 35);
 }
 
+nav ul li:hover {
+  transform: scale(1.10);
+  color: #252525;
+}
+
 #close {
   display: none;
 }
@@ -169,6 +174,7 @@ nav .profile #cart {
   height: 50px;
   border-radius: 10px;
   cursor: default !important;
+  transform: scale(1) !important;
 }
 
 .filledCartData .filledCartDataContent {
@@ -348,7 +354,7 @@ nav .profile #avatar {
   .cartShow{
     width: 280px;
     height: 200px;
-    right: -60px;
+    right: -64px;
   }
 }
 
